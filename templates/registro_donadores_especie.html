@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<h2><span style="margin-left:100px; font-family: Helvetica; color:black; ">Registro de Donaciones en Especie</span></h2>
+<br>
+<center>
+<header>
+</header>
+
+
+<style>
+.has-error .form-control {
+	border-color: #42275E;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+</style>
+<form class="form-horizontal" method="POST">
+	{% csrf_token %} 
+
+			<div class="form-group has-error">
+                <label class="col-md-4 control-label" style="color:black; ">Donador</label>
+                <div class="col-md-6">
+                    <select class="form-control  c-square c-theme" type= {{ form.Donador }}
+                        
+                    </select>
+                </div>
+            </div>
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Descripción</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="descripción" type={{ form.Descripcion }} 
+		            </div>
+			</div>
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Unidades</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="p.e lts, kg, mts" type={{ form.Unidades }} 
+		            </div>
+			</div>
+
+
+            <div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Cantidad</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="#" type={{ form.Cantidad }} 
+		            </div>
+			</div>
+
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Fecha</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="" type={{ form.Fecha }} 
+		            </div>
+			</div>
+
+
+
+			
+
+			<button type="submit" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold" style="background: #42275E; color: #ffffff;">Guardar</button>
+			<button type="reset" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold" style="background: #42275E; color: #ffffff;">Limpiar</button>
+</form>
+
+</center>
+<br>
+<br>
+{%endblock%}

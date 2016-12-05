@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}Perfil Paciente{% endblock %}
+{% block content %}
+<br>
+<link rel="stylesheet" href="/static/css/detallecss.css">
+<div class="container">
+
+<h2><span style="margin-left:100px; font-family: Helvetica; color:black; ">Perfil de Pacientes</span></h2>
+  <br>
+
+<div class="container" style="width:940.45px; margin:0px auto; border:0px solid #000;">
+
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 c-margin-b-20">
+                            <h3 class="c-font-uppercase c-font-bold">{{ list.Paciente_nombre }} {{ list.Paciente_apellido }}</h3>
+                            <ul class="list-unstyled">
+                                <li><b>Fecha:</b> {{ list.Paciente_fnacimiento }}</li>
+                                <li><b>Diagnóstico:</b> {{ list.Paciente_diagnostico }}</li>
+                                <li><b>Clínica:</b> {{ list.Paciente_clinica }}</li>
+                                <li><b>Padre o Tutor:</b> {{ list.Tutor_Padre }}</li>
+                                <li><b>Contacto:</b> {{ list.Paciente_contacto }} </li>
+                                <li><b>Estado de salud:</b> {{ list.Estado_salud }}</li>
+                            </ul>
+                        </div>
+                    </div>
+    <div class="col-md-9">
+     
+                 <table class="table table-list-search">
+                    <thead>
+                        <tr>
+                           <td><b>Fecha</b></td>
+							<td><b>Diagnostico</b></td>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                    {% for item in list1 %}
+						<tr>
+							<td>{{ item.Fecha }}</td>
+							<td>{{ item.Diagnostico }}</td>
+						</tr>	
+					{% endfor %}
+                        
+                    </tbody>
+                </table>   
+    </div>
+        <div class="col-md-9">
+     
+                 <table class="table table-list-search">
+                    <thead>
+                        <tr>
+                            <td><b>Donacion monetaria</b></td>
+                            <td><b>Donacion especie</b></td>
+                            <td><b>Fecha donación</b></td>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                    {% for item in list2 %}
+                        <tr>
+                            <td>{{ item.Donacion_monetaria }}</td>
+                            <td>{{ item.Donacion_especie }}</td>
+                            <td>{{ item.Fecha_entrega }}</td>
+                        </tr>   
+                    {% endfor %}
+                        
+                    </tbody>
+                </table>   
+    </div>
+
+  </div>
+</div>
+
+<center>
+<a class="btn btn-danger" href="/Detalle_Paciente_pdf/{{ list.pk }}" role="button"><b>Generar PDF<b></a>
+</center>
+
+<br>
+<br>
+
+{% endblock %}
+

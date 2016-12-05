@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}Eliminar{% endblock %}
+{% block content %}
+<br>
+<script type="text/javascript">
+			$(document).on('ready',function() {
+				$.ajax({
+					type:"GET",
+					contentType:"application/json; charset=utf-8",
+					dateType:"json",
+					url:"/eventos/",
+					success:function(response) {
+						var i=(response.length-1);
+						for(i;i>=0;i--) {
+							$('#proxevents').append(
+								"<li>"+response[i].fields.Fecha_evento+"</li><li>"+response[i].fields.Lugar_evento+"</li><li>"+response[i].fields.Nombre_evento+"</li><li>"+response[i].fields.Hora_evento+"</li><li>"+response[i].fields.Descripcion_evento+"</li><br>");
+						}
+					}
+				});
+			});
+
+		
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" style="width:940.45px; margin:0px auto; border:0px solid #000;">
+
+  
+  <div class="row">
+ <h2>Nuestros Eventos</h2>
+   
+			<table  class="table table-list-search" style="background-color:white" id="proxevents">
+		  	<tr>
+
+			<td class="col-md-6 col-sm-offset-6" style="margin-left:87px;">
+			<ul></ul>
+
+			</td>
+			
+			</tr>
+		</table>
+
+
+    </div>
+ 
+</div>
+<br>
+<br>
+
+
+{% endblock %}
+

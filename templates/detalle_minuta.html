@@ -1,0 +1,145 @@
+{{% extends 'base.html' %}
+{% block content %}
+
+
+    <div class="container-fluid">
+    	<style>
+.list-group-item {
+
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.panel-heading
+{
+
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+</style>
+        <div  class="row">
+
+            <!--sütun başlangıç-->
+            <div class="panel panel-primary " style="width:940.45px; margin:0px auto; border:0px solid #000; background-color:white;">
+                <div class="panel-heading" style="background-color:#0AB7B3;">
+                    <h1>Minuta Detallada</h1>
+                    <i class="fa fa-2x fa-plus-circle pull-right"></i>
+                </div>
+                <div class="panel-body">
+                    <div  >
+
+                        <article>
+                            <div >
+                        
+                                <div >   
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Título</b></h3></li>
+                       				</ul>
+                                   
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Titulo_reunion }}</p>    
+                                </div>
+
+                                 <div >
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Asunto</b></h3></li>
+                       				</ul>
+                                   
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Asunto_reunion }}</p>     
+                                </div>
+
+                                 <div >   
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Número de Reunión</b></h3></li>
+                       				</ul>
+                                   
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Numero_reunion }}</p>     
+                                </div>
+
+                                 <div >
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Fecha de Reunión</b></h3></li>
+                       				</ul>
+                                   
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Fecha_reunion }}</p>     
+                                </div>
+
+                                <div >   
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Duración de la Reunión</b></h3></li>
+                       				</ul>
+                                   
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Duracion_reunion }}</p>     
+                                </div>
+
+                                 <div >
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Descripción</b></h3></li>
+                       				</ul>
+                                   
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Anotaciones_reunion }}</p>     
+                                </div>
+                                
+                                <div >   
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Administradores Asistentes</b></h3></li>
+                       				</ul>
+                       				{% for item in item.Asistentes_administradores.all %}
+
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Asistentes_administradores }}</p>  
+                                       {% endfor %} 
+                                </div>
+                               
+                                 <div >
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Personal Asistente</b></h3></li>
+                       				</ul>
+                       				{% for item in item.Asistentes.all %}
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Asistentes }}</p>    
+                                     {% endfor %} 
+                                </div>
+                               
+                                <div >   
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Donaciones Monetarias</b></h3></li>
+                       				</ul>
+                                   
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Total_donacionesmon }}</p>     
+                                </div>
+
+                                 <div >
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Donaciones en Especie</b></h3></li>
+                       				</ul>
+                                   
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Valor_donacionesesp }}</p>     
+                                </div>
+
+                                <div >   
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Pacientes Beneficiados</b></h3></li>
+                       				</ul>
+                                   
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Pacientes_beneficiados }}</p>     
+                                </div>
+
+                                 <div >
+                                	<ul class="list-group">
+                                        <li class="list-group-item list-group-item-success"> <h3><b>Anotaciones</b></h3></li>
+                       				</ul>
+                                   
+                                    <p style="font-family:Arial; font-size: 16px;"  align="center">{{ object.Observaciones }}</p>     
+                                </div>
+						
+                            </div>
+                        </article>
+                    </div>  
+            	</div>
+    		</div>
+    	</div>
+    </div>
+
+<br>
+<br>
+
+
+{% endblock %}

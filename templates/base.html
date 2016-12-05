@@ -1,0 +1,248 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+	<head>
+		<title>Fundación SEPHER</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+	</head>
+	
+	<body>
+    <style>
+.footer {
+/*  bottom: auto;
+*/  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  left: 0;
+    right: 0;
+  
+  }
+
+a {
+  text-decoration: none;
+      text-decoration: none !important;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    color: #333;
+}
+
+
+      th {
+         padding: 7px;
+        }
+        td {
+         padding: 8px;
+        }
+</style>
+{% if user.is_authenticated %}
+ <header>
+  
+    <div>
+      <header role="banner">
+        <div class="inner-wrapper">
+        <h1><center><a href="/"><img src="{% static 'img/logosepher.png' %}" width="318px" height="107px"></a></h1>
+        </div> 
+      </header>
+
+      <nav class="nav navbar" style="background-color:#ffffff" role="navigation">
+      <center>
+      <div class="inner-wrapper" style="width:940.45px; margin:0px auto; border:0px solid #000; background-color:#F57F20;">
+      <div class="container" >-
+        <ul class="nav navbar-nav" style=" font-family: Bebas Neue; font-size: 16px;">
+          <div class="w3-display-topleft w3-padding-jumbo w3-xlarge">
+    
+    
+  </div>
+          <li role="presentation"  ><a style="color:white;" href="/"><span class="glyphicon glyphicon-home"></span></a></FONT></li>
+          
+            <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" style="color:white;" href="#">Minutas
+               <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/registro_minutas">Nueva Minuta</a></li>
+                    <li><a href="/reporte_minutas">Reporte</a></li>
+                  </ul>
+            </li>
+              <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" style="color:white;" href="#">Pacientes
+               <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/registro_paciente">Nuevo Paciente</a></li>
+                    <li><a href="/reporte_pacientes">Reporte</a></li>
+                    <li><a href="/consulta">Consulta</a></li>
+                  </ul>
+            </li>
+              <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" style="color:white;" href="#">Donaciones
+               <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/Donadores_monetarias_registro">Nueva donacion monetaria</a></li>
+                    <li><a href="/Donadores_especie_registro">Nueva donacion en especie</a></li>
+                    <li><a href="/Donaciones_monetarias_editar">Reporte donaciones monetaria</a></li>
+                    <li><a href="/Donaciones_especie_editar">Reporte donaciones en especie</a></li>
+
+                  </ul>
+            </li>
+
+            <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" style="color:white;" href="#">Eventos
+               <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/registro_eventos">Nuevo Evento</a></li>
+                    <li><a href="/reporte_eventos">Ver Eventos</a></li>
+
+                  </ul>
+          <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" style="color:white;" href="#">Administracion
+               <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/registro_minutas">Nueva Minuta</a></li>
+                    <li><a href="/reporte_minutas">Reporte Minuta</a></li>
+                    <li><a href="/reporte_mensual">Reporte Mensual</a></li>
+                    <li><a href="/registro_personal">Nuevo Personal</a></li>
+                    <li><a href="/reporte_personal">Reporte Personal</a></li>
+
+                  </ul>
+
+          
+        </ul>
+      </div>
+      </div>
+      </center>
+      </nav>
+
+
+
+    </div>
+
+{% else %}
+
+  <header>
+    <div>
+      <header role="banner">
+        <div class="inner-wrapper">
+        <h1><center><a href="/"><img src="{% static 'img/logosepher.png' %}" width="318px" height="107px"></a></h1>
+        </div> 
+      </header>
+      <nav class="nav navbar" style="background-color:#ffffff" role="navigation">
+      <center>
+      <div class="inner-wrapper" style="width:940.45px; margin:0px auto; border:0px solid #000; background-color:#F57F20;">
+      <div class="container" >-
+        <ul class="nav navbar-nav" style=" font-family: Bebas Neue; font-size: 16px;">
+           <li role="presentation"  ><a style="color:white;" href="/"><span class="glyphicon glyphicon-home"></span></a></FONT></li>
+          
+            <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" style="color:white;" href="#">Quienes Somos
+               <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/Mision">Misión</a></li>
+                    <li><a href="/Historia">Historia</a></li>
+                  </ul>
+            </li>
+          <li><a href="/sephereventos" style="color:white" >Eventos</a></li>
+          <li><a href="/galeria" style="color:white" >Galería</a></li>
+          <li><a href="/Ubicacion" style="color:white" >Nuestra Ubicación</a></li>
+          </li>
+            {% if user.is_authenticated %}
+          <p class="navbar-text navbar-right"><b>Signed in as </b><a href="/Admin" class="navbar-link"> {{ user.username }}</a>
+          <a href="/salir/"><b>Logout</b></a>
+          </p>
+        {% else %}
+          <p class="navbar-text navbar-right"><b>Signed in as</b><a href="/Admin" class="navbar-link"><b>None</b></a>
+          </p>
+        {% endif %}
+      </ul>
+          <li><a href="/Admin" style="color:white" >Administracion</a></li>
+
+          
+        </ul>
+      </div>
+      </div>
+      </center>
+      </nav>
+    </div>
+    {% endif %}
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        {% block content %}
+    {% endblock %}
+      </div>
+    </div>
+    
+  </div>
+
+
+
+
+<section id="footer" style="padding-top: 35px;  background-color: #40647c">
+            <div class="container"  style="width:940.45px;   background-color: #40647c">
+                <div class="row">
+                    <div class="col-md-3">
+                       <center> <img src="{% static 'img/logosepher.png' %}" alt="SEPHER" width="140px" height="45px"></center>
+                       <br>
+                        <p align="center" style="font-family: Bebas Neue; font-size: 14px;"><b>Fundación Sebastian de la Peña Hernandez A.C.</b>.</p>
+                        <br>
+                        <ul class="list-unstyled list-inline social-icons">
+                            <li><a href="https://www.facebook.com/Fundaci%C3%B3n-Sepher-185168645266910" class="facebook"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDkwIDkwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA5MCA5MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxwYXRoIGlkPSJGYWNlYm9va19feDI4X2FsdF94MjlfIiBkPSJNOTAsMTUuMDAxQzkwLDcuMTE5LDgyLjg4NCwwLDc1LDBIMTVDNy4xMTYsMCwwLDcuMTE5LDAsMTUuMDAxdjU5Ljk5OCAgIEMwLDgyLjg4MSw3LjExNiw5MCwxNS4wMDEsOTBINDVWNTZIMzRWNDFoMTF2LTUuODQ0QzQ1LDI1LjA3Nyw1Mi41NjgsMTYsNjEuODc1LDE2SDc0djE1SDYxLjg3NUM2MC41NDgsMzEsNTksMzIuNjExLDU5LDM1LjAyNFY0MSAgIGgxNXYxNUg1OXYzNGgxNmM3Ljg4NCwwLDE1LTcuMTE5LDE1LTE1LjAwMVYxNS4wMDF6IiBmaWxsPSIjMDAwMDAwIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" "Icon made by SimpleIcon from www.flaticon.com" width="20px" height="20px"><i ></i></a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4 style="font-family: Bebas Neue;"><b>ENTRADAS</b></h4>
+                        <ul class="list-unstyled" style="font-family: Bebas Neue; font-size: 16px;">
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="/" >INICIO</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="/Historia">HISTORIA</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">EVENTOS</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="/galeria">GALERIA</a></li>
+                            <li><i class="fa fa-caret-right fa-fw" aria-hidden="true"></i> <a href="#">DONAR</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3" >
+                        <h4 style="font-family: Bebas Neue;"><b>CONTACTANOS </b></h4>
+
+                        <table class="tg">
+                            <tr>
+                              <th class="tg-031e"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQzMC4xMTQgNDMwLjExNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDMwLjExNCA0MzAuMTE0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggaWQ9IkZhY2Vib29rX1BsYWNlcyIgZD0iTTM1Ni4yMDgsMTA3LjA1MWMtMS41MzEtNS43MzgtNC42NC0xMS44NTItNi45NC0xNy4yMDVDMzIxLjc0NiwyMy43MDQsMjYxLjYxMSwwLDIxMy4wNTUsMCAgIEMxNDguMDU0LDAsNzYuNDYzLDQzLjU4Niw2Ni45MDUsMTMzLjQyN3YxOC4zNTVjMCwwLjc2NiwwLjI2NCw3LjY0NywwLjYzOSwxMS4wODljNS4zNTgsNDIuODE2LDM5LjE0Myw4OC4zMiw2NC4zNzUsMTMxLjEzNiAgIGMyNy4xNDYsNDUuODczLDU1LjMxNCw5MC45OTksODMuMjIxLDEzNi4xMDZjMTcuMjA4LTI5LjQzNiwzNC4zNTQtNTkuMjU5LDUxLjE3LTg3LjkzM2M0LjU4My04LjQxNSw5LjkwMy0xNi44MjUsMTQuNDkxLTI0Ljg1NyAgIGMzLjA1OC01LjM0OCw4LjktMTAuNjk2LDExLjU2OS0xNS42NzJjMjcuMTQ1LTQ5LjY5OSw3MC44MzgtOTkuNzgyLDcwLjgzOC0xNDkuMTA0di0yMC4yNjIgICBDMzYzLjIwOSwxMjYuOTM4LDM1Ni41ODEsMTA4LjIwNCwzNTYuMjA4LDEwNy4wNTF6IE0yMTQuMjQ1LDE5OS4xOTNjLTE5LjEwNywwLTQwLjAyMS05LjU1NC01MC4zNDQtMzUuOTM5ICAgYy0xLjUzOC00LjItMS40MTQtMTIuNjE3LTEuNDE0LTEzLjM4OHYtMTEuODUyYzAtMzMuNjM2LDI4LjU2LTQ4LjkzMiw1My40MDYtNDguOTMyYzMwLjU4OCwwLDU0LjI0NSwyNC40NzIsNTQuMjQ1LDU1LjA2ICAgQzI3MC4xMzgsMTc0LjcyOSwyNDQuODMzLDE5OS4xOTMsMjE0LjI0NSwxOTkuMTkzeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" "Icon made by SimpleIcon from www.flaticon.com"></img></th>
+                              <th class="tg-031e"  style="font-family: Bebas Neue; font-size: 12px;">Av.Ingenieros #211, <br>Col.Otay Universidad<br> Tijuana, Baja California,<br> México. C.P. 22427 </th>
+                            </tr>
+                            <tr>
+                              <td class="tg-yw4l"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDMxLjQ2MiAzMS40NjMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMxLjQ2MiAzMS40NjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNMzEuMjYxLDAuNjIyYy0wLjAwOC0wLjAwOS0wLjAxMi0wLjAxOS0wLjAxNi0wLjAyNGMtMC4wMDgtMC4wMTMtMC4wMi0wLjAyMS0wLjAyMy0wLjAzMSAgIGMtMC4yMjctMC4zMTEtMC41ODYtMC41MTQtMC45OTgtMC41MTRoLTAuMDAySDkuMjY5SDkuMjY2Yy0wLjY4MywwLTEuMjMzLDAuNTUzLTEuMjMzLDEuMjM0djAuMDAxdjEuMDc2djQuMDQyVjguNjh2NC4wNDN2Mi4yNzEgICB2NC4wNDF2Mi4yNzN2NC4wNDN2MS4wNzVsMCwwYzAsMC4yNDcsMC4wNzQsMC40NzgsMC4xOTksMC42NzFjMC4wMDYsMC4wMDYsMC4wMDgsMC4wMTQsMC4wMTIsMC4wMjEgICBjMC4wMSwwLjAxMiwwLjAyLDAuMDIxLDAuMDI1LDAuMDNjMC4yMjUsMC4zMTIsMC41ODYsMC41MTUsMC45OTcsMC41MTVoMC4wMDJoMS41MzRjLTAuMjU4LDEuNjc1LTEuNjk1LDIuOTY1LTMuNDQxLDIuOTY1ICAgYy0xLjc2NCwwLTMuMjEyLTEuMzE3LTMuNDQ1LTMuMDIxaDEuNTQ3bDAsMGMwLjY4MywwLDEuMjM0LTAuNTUzLDEuMjM0LTEuMjMzdi0wLjAwMXYtMS4wNzV2LTQuMDQzdi0yLjI3MnYtNC4wNDF2LTIuMjczVjguNjI1ICAgVjYuMzUyVjIuMzExVjEuMjM0VjEuMjMyYzAtMC4yNDQtMC4wNzItMC40NzQtMC4xOTctMC42NjRDNi40OTUsMC41NjEsNi40OSwwLjU1LDYuNDg0LDAuNTQ0QzYuNDc5LDAuNTMyLDYuNDcsMC41MjMsNi40NjEsMC41MTQgICBDNi4yMzYsMC4yMDQsNS44NzUsMCw1LjQ2MiwwbDAsMEgxLjI0MUgxLjIzOUMwLjU1NywwLDAuMDA3LDAuNTUzLDAuMDA3LDEuMjMydjAuMDAyVjIuMzF2NC4wNDF2Mi4yNzN2NC4wNDN2Mi4yNzN2NC4wNDF2Mi4yNzIgICB2NC4wNDN2MS4wNzZ2MC4wMDFjMCwwLjI0NywwLjA3MiwwLjQ3NywwLjE5NywwLjY2OWMwLjAwNiwwLjAwNiwwLjAxLDAuMDE1LDAuMDE0LDAuMDIxYzAuMDA4LDAuMDEzLDAuMDE3LDAuMDIxLDAuMDIzLDAuMDMxICAgYzAuMjI3LDAuMzEyLDAuNTg2LDAuNTE0LDAuOTk4LDAuNTE0aDAuMDAyaDEuODM4YzAuMjM5LDIuMTYyLDIuMDU3LDMuODU1LDQuMjgxLDMuODU1YzIuMjA3LDAsNC4wMTQtMS42NjcsNC4yNzctMy44MDJoMTguNTg0ICAgaDAuMDAyYzAuNjgzLDAsMS4yMzItMC41NTQsMS4yMzItMS4yMzN2LTAuMDAyVjI1LjM1di00LjA0M3YtMi4yNzF2LTQuMDQxdi0yLjI3MlY4LjY4VjYuNDA3VjIuMzY1VjEuMjg5VjEuMjg4ICAgQzMxLjQ1OCwxLjA0MSwzMS4zODQsMC44MTIsMzEuMjYxLDAuNjIyeiBNMTUuOTcsMTguNjU2YzAsMC4yOTEtMC4yMzYsMC41MjUtMC41MjcsMC41MjVoLTIuOTAyYy0wLjI5MSwwLTAuNTI2LTAuMjM0LTAuNTI2LTAuNTI1ICAgdi0xLjIzYzAtMC4yODksMC4yMzUtMC41MjUsMC41MjYtMC41MjVoMi45MDJjMC4yOTEsMCwwLjUyNywwLjIzNiwwLjUyNywwLjUyNVYxOC42NTZ6IE0xNS45NywxNC40NzMgICBjMCwwLjI5MS0wLjIzNiwwLjUyNy0wLjUyNywwLjUyN2gtMi45MDJjLTAuMjkxLDAtMC41MjYtMC4yMzYtMC41MjYtMC41Mjd2LTEuMjI5YzAtMC4yOTEsMC4yMzUtMC41MjcsMC41MjYtMC41MjdoMi45MDIgICBjMC4yOTEsMCwwLjUyNywwLjIzNiwwLjUyNywwLjUyN1YxNC40NzN6IE0xNS45NywxMC4yOWMwLDAuMjg5LTAuMjM2LDAuNTI2LTAuNTI3LDAuNTI2aC0yLjkwMmMtMC4yOTEsMC0wLjUyNi0wLjIzNy0wLjUyNi0wLjUyNiAgIFY5LjA2MWMwLTAuMjkxLDAuMjM1LTAuNTI3LDAuNTI2LTAuNTI3aDIuOTAyYzAuMjkxLDAsMC41MjcsMC4yMzYsMC41MjcsMC41MjdWMTAuMjl6IE0yMS43MjQsMTguNjU2ICAgYzAsMC4yOTEtMC4yMzQsMC41MjUtMC41MjcsMC41MjVoLTIuOTAxYy0wLjI5MywwLTAuNTI2LTAuMjM0LTAuNTI2LTAuNTI1di0xLjIzYzAtMC4yODksMC4yMzMtMC41MjUsMC41MjYtMC41MjVoMi45MDEgICBjMC4yOTMsMCwwLjUyNywwLjIzNiwwLjUyNywwLjUyNVYxOC42NTZ6IE0yMS43MjQsMTQuNDczYzAsMC4yOTEtMC4yMzQsMC41MjctMC41MjcsMC41MjdoLTIuOTAxICAgYy0wLjI5MywwLTAuNTI2LTAuMjM2LTAuNTI2LTAuNTI3di0xLjIyOWMwLTAuMjkxLDAuMjMzLTAuNTI3LDAuNTI2LTAuNTI3aDIuOTAxYzAuMjkzLDAsMC41MjcsMC4yMzYsMC41MjcsMC41MjdWMTQuNDczeiAgICBNMjEuNzI0LDEwLjI5YzAsMC4yODktMC4yMzQsMC41MjYtMC41MjcsMC41MjZoLTIuOTAxYy0wLjI5MywwLTAuNTI2LTAuMjM3LTAuNTI2LTAuNTI2VjkuMDYxYzAtMC4yOTEsMC4yMzMtMC41MjcsMC41MjYtMC41MjcgICBoMi45MDFjMC4yOTMsMCwwLjUyNywwLjIzNiwwLjUyNywwLjUyN1YxMC4yOXogTTI3LjQ3OCwxOC42NTZjMCwwLjI5MS0wLjIzNiwwLjUyNS0wLjUyOSwwLjUyNWgtMi44OTkgICBjLTAuMjkzLDAtMC41MjgtMC4yMzQtMC41MjgtMC41MjV2LTEuMjNjMC0wLjI4OSwwLjIzNS0wLjUyNSwwLjUyOC0wLjUyNWgyLjg5OWMwLjI5MywwLDAuNTI5LDAuMjM2LDAuNTI5LDAuNTI1VjE4LjY1NnogICAgTTI3LjQ3OCwxNC40NzNjMCwwLjI5MS0wLjIzNiwwLjUyNy0wLjUyOSwwLjUyN2gtMi44OTljLTAuMjkzLDAtMC41MjgtMC4yMzYtMC41MjgtMC41Mjd2LTEuMjI5YzAtMC4yOTEsMC4yMzUtMC41MjcsMC41MjgtMC41MjcgICBoMi44OTljMC4yOTMsMCwwLjUyOSwwLjIzNiwwLjUyOSwwLjUyN1YxNC40NzN6IE0yNy40NzgsMTAuMjljMCwwLjI4OS0wLjIzNiwwLjUyNi0wLjUyOSwwLjUyNmgtMi44OTkgICBjLTAuMjkzLDAtMC41MjgtMC4yMzctMC41MjgtMC41MjZWOS4wNjFjMC0wLjI5MSwwLjIzNS0wLjUyNywwLjUyOC0wLjUyN2gyLjg5OWMwLjI5MywwLDAuNTI5LDAuMjM2LDAuNTI5LDAuNTI3VjEwLjI5eiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" "Icon made by Freepik from www.flaticon.com"></img></td>
+                              <td class="tg-yw4l" align="justify" style="font-family: Bebas Neue; font-size: 14px;">664-990-27-94 </td>
+                            </tr>
+                            <tr>
+                              <td class="tg-031e"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDE0IDE0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxNCAxNDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik03LDlMNS4yNjgsNy40ODRsLTQuOTUyLDQuMjQ1QzAuNDk2LDExLjg5NiwwLjczOSwxMiwxLjAwNywxMmgxMS45ODYgICAgYzAuMjY3LDAsMC41MDktMC4xMDQsMC42ODgtMC4yNzFMOC43MzIsNy40ODRMNyw5eiIgZmlsbD0iIzAwMDAwMCIvPgoJCTxwYXRoIGQ9Ik0xMy42ODQsMi4yNzFDMTMuNTA0LDIuMTAzLDEzLjI2MiwyLDEyLjk5MywySDEuMDA3QzAuNzQsMiwwLjQ5OCwyLjEwNCwwLjMxOCwyLjI3M0w3LDggICAgTDEzLjY4NCwyLjI3MXoiIGZpbGw9IiMwMDAwMDAiLz4KCQk8cG9seWdvbiBwb2ludHM9IjAsMi44NzggMCwxMS4xODYgNC44MzMsNy4wNzkgICAiIGZpbGw9IiMwMDAwMDAiLz4KCQk8cG9seWdvbiBwb2ludHM9IjkuMTY3LDcuMDc5IDE0LDExLjE4NiAxNCwyLjg3NSAgICIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" "Icon made by Yannickc from www.flaticon.com"></img></td>
+                              <td class="tg-031e" align="justify" style="font-family: Bebas Neue; font-size: 14px;">angela@sepher.com</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+
+                   
+                </div>
+
+                <div class="row">
+                    <hr>
+                    <div class="col-md-12 text-center bottom">
+                        <p>Copyright © 2016 SEPHER A.C. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+
+
+	</body>
+</html>

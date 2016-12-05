@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<h2><span style="margin-left:100px; font-family: Helvetica; color:black; ">Modificar Minuta</span></h2>
+<br>
+<center>
+<header>
+</header>
+
+
+<style>
+.has-error .form-control {
+	border-color: #42275E;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+</style>
+<form class="form-horizontal" method="POST">
+	{% csrf_token %} 
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Título</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="nombre" type={{ form.Titulo_reunion}} 
+		            </div>
+			</div>
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Asunto</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="asunto" type={{ form.Asunto_reunion}} 
+		            </div>
+			</div>
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Número de Reunión</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="#" type={{ form.Numero_reunion}} 
+		            </div>
+			</div>
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Fecha de Reunión</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="fecha" type={{ form.Fecha_reunion}} 
+		            </div>
+			</div>
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Duración de la Reunión</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="tiempo" type={{ form.Duracion_reunion}} 
+		            </div>
+			</div>
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Descripción</label>
+		            <div class="col-md-6">
+		                <textarea class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="descripción de las actividades a tratar o realizar" type={{ form.Anotaciones_reunion}} 
+		            </div>
+			</div>
+
+
+			<div class="form-group has-error">
+                <label class="col-md-4 control-label" style="color:black; ">Administradores Asistentes</label>
+                <div class="col-md-6">
+                    <select class="form-control  c-square c-theme" type= {{ form.Asistentes_administradores }}
+                                             
+                    </select>
+                </div>
+            </div>
+
+
+			<div class="form-group has-error">
+                <label class="col-md-4 control-label" style="color:black; ">Personal Asistente</label>
+                <div class="col-md-6">
+                    <select class="form-control  c-square c-theme" type= {{ form.Asistentes }}
+                                             
+                    </select>
+                </div>
+            </div>
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Donaciones Monetarias</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="cantidad total$" type=number {{ form.Total_donacionesmon }}  
+		            </div>
+			</div>	
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Donaciones en Especie</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="valoración aproximada $" type=number {{ form.Valor_donacionesesp }}  
+		            </div>
+			</div>	
+
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Pacientes Beneficiados</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="#" type={{ form.Pacientes_beneficiados}} 
+		            </div>
+			</div>
+
+          	<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Anotaciones</label>
+		            <div class="col-md-6">
+		                <textarea class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="observaciones importantes de la reunión" type={{ form.Observaciones}} 
+		            </div>
+			</div>
+
+          
+
+
+			<button type="submit" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold" style="background: #42275E; color: #ffffff;">Guardar</button>
+			<a role="button" href="/reporte_minutas"  class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold" style="background: #42275E; color: #ffffff;">Cancelar</a>
+</form>
+
+</center>
+<br>
+<br>
+{%endblock%}

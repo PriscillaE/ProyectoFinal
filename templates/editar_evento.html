@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<h2><span style="margin-left:100px; font-family: Helvetica; color:black; ">Modificar Evento</span></h2>
+<br>
+<center>
+<header>
+</header>
+
+
+<style>
+.has-error .form-control {
+	border-color: #42275E;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+</style>
+<form class="form-horizontal" method="POST">
+	{% csrf_token %} 
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Nombre del Evento</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="nombre" type={{ form.Nombre_evento }} 
+		            </div>
+			</div>
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Fecha del Evento</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="fecha" type={{ form.Fecha_evento }} 
+		            </div>
+			</div>
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Lugar del Evento</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="lugar" type={{ form.Lugar_evento }} 
+		            </div>
+			</div>
+
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Horario del Evento</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="hora" type={{ form.Hora_evento }} 
+		            </div>
+			</div>
+
+			
+			 <div class="form-group has-error">
+                <label class="col-md-4 control-label" style="color:black; ">Personal del Evento</label>
+                <div class="col-md-6">
+                    <select class="form-control  c-square c-theme" type= {{ form.Personal_evento }}
+                        
+                     
+                    </select>
+                </div>
+            </div>
+
+         	 <div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Descripción del Evento</label>
+		            <div class="col-md-6">
+		                <textarea class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="tema o descripción del evento" type={{ form.Descripcion_evento}} 
+		            </div>
+			</div>
+
+
+			<button type="submit" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold" style="background: #42275E; color: #ffffff;">Guardar</button>
+			<a role="button" href="/reporte_eventos"  class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold" style="background: #42275E; color: #ffffff;">Cancelar</a>
+</form>
+
+</center>
+<br>
+<br>
+{%endblock%}

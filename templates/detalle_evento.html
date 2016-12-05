@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}Donadores register{% endblock %}
+{% block content %}
+
+<br>
+<h2><span style="margin-left:100px; font-family: Helvetica; color:black; ">Descripción del Evento</span></h2>
+<br>
+
+<div class="row"  style="margin-left:120px;">
+
+
+	<div class="col-lg-3" >
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            
+            <p align="justify">{{ object.Descripcion_evento }}.</p>
+
+    </div>
+
+<left>
+    <div class="col-md-7">
+        <div class="padding35" align="right" >
+            
+	        <div class="padding45">
+	            <b>Nombre del Evento:</b> {{ object.Nombre_evento }}
+	      	</div>
+
+	        <div class="padding15">
+	            <b>Fecha del Evento:</b> {{ object.Fecha_evento }}
+	        </div>
+
+	        <div class="padding15">
+	            <b>Horario del Evento:</b> {{ object.Hora_evento }}
+	        </div>
+
+	         <div class="padding15">
+	            <b>Lugar del Evento:</b> {{ object.Lugar_evento }}
+	      	</div>
+
+        </div>
+</left>
+        <br>
+       
+
+    </div>
+    
+    
+</div>
+<br>
+
+
+
+{% endblock %}

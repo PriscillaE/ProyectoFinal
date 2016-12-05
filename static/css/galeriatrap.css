@@ -1,0 +1,365 @@
+:hov
+
+.cls
+
+element.style {
+}
+.container, .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container, .container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 768px)
+.container {
+    width: 750px;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+Inherited from body.c-layout-header-fixed.c-layout-header-mobile-fixed
+body {
+    color: #5c6873;
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 300;
+    font-size: 17px;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+}
+Inherited from html
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+.container-fluid:after, .container-fluid:before, .container:after, .container:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+Pseudo ::after element
+.container-fluid:after, .container-fluid:before, .container:after, .container:before, .row:after, .row:before {
+    display: table;
+    content: " ";
+}
+.btn-group-vertical>.btn-group:after, .btn-toolbar:after, .clearfix:after, .container-fluid:after, .container:after, .dropdown-menu>li>a, .form-horizontal .form-group:after, .modal-footer:after, .modal-header:after, .navbar-collapse:after, .navbar-header:after, .navbar:after, .pager:after, .panel-body:after, .row:after {
+    clear: both;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+element.style {
+    position: relative;
+    height: 2920px;
+}
+.c-content-isotope-gallery.c-opt-4 {
+    margin: -5px;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+Inherited from body.c-layout-header-fixed.c-layout-header-mobile-fixed
+body {
+    color: #5c6873;
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 300;
+    font-size: 17px;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+}
+Inherited from html
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+Pseudo ::before element
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+Pseudo ::after element
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+element.style {
+    position: absolute;
+    left: 0%;
+    top: 0px;
+}
+@media (max-width: 991px)
+.c-content-isotope-gallery.c-opt-1 .c-content-isotope-item, .c-content-isotope-gallery.c-opt-4 .c-content-isotope-item, .c-content-isotope-gallery.c-opt-5 .c-content-isotope-item {
+    width: 50%;
+}
+.c-content-isotope-gallery.c-opt-4 .c-content-isotope-item {
+    padding: 5px;
+}
+.c-content-isotope-gallery.c-opt-1 .c-content-isotope-item, .c-content-isotope-gallery.c-opt-4 .c-content-isotope-item, .c-content-isotope-gallery.c-opt-5 .c-content-isotope-item {
+    width: 20%;
+}
+.c-content-isotope-gallery .c-content-isotope-item {
+    height: auto;
+    position: relative;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+Inherited from body.c-layout-header-fixed.c-layout-header-mobile-fixed
+body {
+    color: #5c6873;
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 300;
+    font-size: 17px;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+}
+Inherited from html
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+Pseudo ::after element
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+element.style {
+}
+.c-content-isotope-gallery .c-content-isotope-item > .c-content-isotope-image-container {
+    position: relative;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+Inherited from body.c-layout-header-fixed.c-layout-header-mobile-fixed
+body {
+    color: #5c6873;
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 300;
+    font-size: 17px;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+}
+Inherited from html
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+Pseudo ::after element
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+element.style {
+}
+.c-content-isotope-gallery .c-content-isotope-item > .c-content-isotope-image-container > .c-content-isotope-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+Inherited from body.c-layout-header-fixed.c-layout-header-mobile-fixed
+body {
+    color: #5c6873;
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 300;
+    font-size: 17px;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+}
+
+Inherited from html
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+Pseudo ::after element
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+element.style {
+}
+.c-content-isotope-gallery .c-content-isotope-item > .c-content-isotope-image-container > .c-content-isotope-overlay > .c-content-isotope-overlay-icon {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+Inherited from body.c-layout-header-fixed.c-layout-header-mobile-fixed
+body {
+    color: #5c6873;
+    font-family: "Roboto Condensed", sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 300;
+    font-size: 17px;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
+}
+Inherited from html
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+Pseudo ::after element
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+
+	<h2><span style="margin-left:100px; font-family: Helvetica; color:black; ">Registro de Donadores</span></h2>
+<br>
+<center>
+<header>
+</header>
+
+
+<style>
+.has-error .form-control {
+	border-color: #42275E;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+</style>
+<form class="form-horizontal" method="POST">
+	{% csrf_token %} 
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Nombre </label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="nombre" type={{ form.Donador_nombre}} 
+		            </div>
+			</div>
+
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Teléfono</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="p.e 664-111-22-33" type={{ form.Donador_tel}} 
+		            </div>
+			</div>
+
+
+			<div class="form-group has-error">
+		            <label for="inputEmail3-1121" class="col-md-4 control-label" style="color:black; ">Correo</label>
+		            <div class="col-md-6">
+		                <input class="form-control  c-square c-theme" id="inputEmail3-1121" placeholder="email" type={{ form.Donador_correo}} 
+		            </div>
+			</div>
+
+
+			
+
+			<button type="submit" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold" style="background: #42275E; color: #ffffff;">Guardar</button>
+			<button type="reset" class="btn c-theme-btn c-btn-square c-btn-uppercase c-btn-bold" style="background: #42275E; color: #ffffff;">Limpiar</button>
+</form>
+
+</center>
+<br>
+<br>
+{%endblock%}
